@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Your Todo List</title>
+    <!--    begin meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--    end meta-->
+    <!--css file links -->
+    <link rel="stylesheet" href="css/main.css">
+    <!--favicon links -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    
+    <div class="app-container">
+        <div class="header-div">
+            <div class="title-div">
+                <span class="title">Your Todo List</span>
+                <button id="tutorial-btn" onclick="view.toggleTutorialDiv()">?</button>
+            </div>
+        </div>
+        <div class="tutorial-div hide">
+            <h2>Track your todos</h2>
+            <div class="feature-div">
+                <span class="feature-title">1-ADD</span>
+                <div class="feature-text">
+                    Add your todo by pressing the enter key or tap the '+' button.
+                </div>
+            </div>
+            <div class="feature-div">
+                <span class="feature-title">2-SEE</span>
+                <div class="feature-text">
+                    You'll see it right away after you add a todo. 
+                    Your latest todo will appear 1st on the list.
+                </div>
+            </div>
+            <div class="feature-div">
+                <span class="feature-title">3-CHECK</span>
+                <div class="feature-text">
+                    Check off what you've done with the dark blue checkbox next to your todo.
+                    Mark all your todos as done with the dark blue checkmark button.
+                </div>
+            </div>
+            <div class="feature-div">
+                <span class="feature-title">4-CHANGE</span>
+                <div class="feature-text">
+                    Make changes by tapping on your todo.
+                    Save it by pressing enter key on your keyboard or tap outside of the box.
+                    Cancel your change by pressing escape key on your keyword.
+                </div>
+            </div>
+            <div class="feature-div">
+                <span class="feature-title">5-DELETE</span>
+                <div class="feature-text">
+                    Delete your todo by tapping the 'x' button next to your todo.
+                </div>
+            </div>
+        </div>
+        <div class="content-div">
+            <div class="todo-create-div">
+                <input id="toggle-all-btn" class="hide" type="checkbox" onclick="controller.toggleAll()">
+                <input id="create-todo-input" type="text" placeholder="What you gotta do?" onkeyup="controller.createTodoEntered()">
+                <button id="create-todo-btn" class="hide" onclick="controller.createTodo()">+</button>
+                <div id="alert-box"></div>
+            </div>
+            <div class="todos-view-box">
+                <br>
+                <ul></ul>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <!--javascript file links -->
+    <script src="js/app.js"></script>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
